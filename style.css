@@ -92,6 +92,33 @@ footer {
   font-size: 0.9rem;
 }
 
+/* Profile photo container */
+.about-container.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Profile photo styling */
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #007bff;
+  filter: grayscale(100%);
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-photo:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+  box-shadow: 0 0 18px #007bff;
+}
+
 /* Responsive design */
 @media (max-width: 600px) {
   header h1 {
@@ -101,5 +128,10 @@ footer {
   section {
     padding: 20px;
     margin: 20px 10px;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 120px;
   }
 }
